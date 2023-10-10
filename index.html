@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Link</title> <!--still workshopping title-->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fc657c46b8.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./favicon-32x32.png">
+</head>
+<body>
+    <div id="sidenav">
+        <div class="top">
+            <div class="logo">
+                <img id="icon" src="./images/health-white.png" alt="icon">
+                <span>Health Link</span>
+            </div>
+            <i id="btn" class="fa fa-bars"></i>
+        </div>
+        <div class="user">
+            <img src="D:\healthcare-app\images\FM.png" alt="me" class="me">
+            <div>
+                <p class="bold">Faith M.</p>
+                <p>Admin</p>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="bx bxs-grid-alt"></i>
+                    <span class="nav-item">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-clinic'></i>
+                    <span class="nav-item">Clinic</span>
+                </a>
+                <span class="tooltip">Clinic</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-donate-blood'></i>
+                    <span class="nav-item">Laboratory</span>
+                </a>
+                <span class="tooltip">Laboratory</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-capsule'></i>
+                    <span class="nav-item">Pharmacy</span>
+                </a>
+                <span class="tooltip">Pharmacy</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-laptop' ></i>
+                    <span class="nav-item">Support</span>
+                </a>
+                <span class="tooltip">Support</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-chat'></i>
+                    <span class="nav-item">Chat</span>
+                </a>
+                <span class="tooltip">Chat</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-log-out"></i>
+                    <span class="nav-item">Logout</span>
+                </a>
+                <span class="tooltip">Logout</span>
+            </li>
+        </ul>
+    </div>    
+
+    <div class="main-content">
+        <div class="header">
+            <img class="log" src="./images/health.png" alt="logo">
+        </div>
+        <div class="slideshow">
+        </div>
+        <div class="words">
+            <p>Health Link aims to connect the different aspects of Healthcare in a wholesome way. With Health Link, the barriers separating the clinic, laboratory and pharmacy are removed. Additionally, IT support is always available. Sign Up to be a part of this collaboration. Together we can!</p>
+            <button type="submit" onClick="myFunction()">Sign Up</button>
+        </div>
+        <div class="grid">
+            <div class="grid1">
+                <img id="main-pic" class="main-pic" src="./images/clinic.png" alt="clinic">
+                <p><b>Clinic</b></p>
+            </div>
+            <div class="grid2">
+                <img id="main-pic" class="main-pic" src="./images/lab.png" alt="lab">
+                <p><b>Laboratory</b></p>
+            </div>
+            <div class="grid3">
+                <img id="main-pic" class="main-pic" src="./images/pharmacy.png" alt="pharmacy">
+                <p><b>Pharmacy</b></p>
+            </div>
+            <div class="grid4">
+                <img id="main-pic" class="main-pic" src="./images/tech.png" alt="tech-support">
+                <p><b>Technical Support</b></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        //sign up button on click
+        function myFunction() {
+            window.location.href = "signup.html";
+            }        
+
+         //sidenav folding and unfolding
+        let btn = document.querySelector('#btn');
+        let sidenav = document.querySelector('#sidenav');
+    
+        btn.onclick = function() {
+            sidenav.classList.toggle('active');
+        };
+    </script>
+</body>
+<footer>
+    <i class="bx bxl-instagram"></i>
+    <i class='bx bxl-pinterest-alt' ></i>
+    <i class='bx bxl-meta' ></i>
+    <i class='bx bxl-twitter'></i>
+    <i class='bx bxl-linkedin' ></i>
+    <p>Contact Us</p>
+    <p>Copyright 2023 | Faith Mbasani</p>
+</footer>
+</html>

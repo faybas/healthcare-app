@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./favicon-32x32.png">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title"> Sign Up</h1>
+            <form>
+                <div class="input-group">
+                    <div id="nameField" class="input-field">
+                        <i class='bx bxs-user'></i>
+                        <input id="txt" type="text" placeholder="Name">
+                    </div>
+                    <div class="input-field">
+                        <i class='bx bxs-envelope' ></i>
+                        <input id="txt" type="email" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <i class='bx bxs-lock-alt' ></i>
+                        <input id="txt" type="password" placeholder="Password">
+                    </div>
+                    <p>Lost Password? <a href="#">Click Here!</a></p>
+                </div>
+                <div class="btn-field">
+                    <button id="signupBtn" type="button">Sign Up</button>
+                    <button id="loginBtn" class="disable" type="button">Log In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        let signupBtn = document.getElementById('signupBtn');
+        let loginBtn = document.getElementById('loginBtn');
+        let nameField = document.getElementById('nameField');
+        let title = document.getElementById('title');
+
+        loginBtn.onclick = function() {
+            //hides nameField when log in is clicked
+            nameField.style.maxHeight = '0';
+            title.innerHTML = 'Log In';
+            signupBtn.classList.add('disable'); //switches color with signupBtn on click
+            loginBtn.classList.remove('disable');
+        }
+        signupBtn.onclick = function() {
+            //hides nameField when log in is clicked
+            nameField.style.maxHeight = '60px';
+            title.innerHTML = 'Sign Up';
+            signupBtn.classList.remove('disable'); //switches color with signupBtn on click
+            loginBtn.classList.add('disable');
+        }
+    </script>
+</body>
+</html>

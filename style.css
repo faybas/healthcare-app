@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.me {
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid #eee;
+}
+#sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 80px;
+    background-color: #bbc4eb;
+    padding: .4rem .8rem;
+    transition: all 0.5s ease;
+}
+#sidenav.active ~ .main-content {
+    left: 250px;
+    width: calc(100% - 250px);
+}
+#sidenav.active {
+    width: 250px;
+}
+#sidenav #btn {
+    position: absolute;
+    color: #fff;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: 0.8s;
+}
+#sidenav #btn:hover {
+    color: #2218a7;
+}
+#sidenav.active #btn {
+    left: 93%;
+}
+#sidenav .top .logo {
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+#sidenav.active .top .logo {
+    opacity: 1;
+}
+.top .logo {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+#icon {
+    height: 40px;
+    width: 40px;
+}
+.user {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+
+}
+.user p {
+    color: #fff;
+    opacity: 1;
+    margin-left: 1rem;
+}
+.bold {
+    font-weight: 600;
+}
+#sidenav p {
+    opacity: 0;
+}
+#sidenav.active p {
+    opacity: 1;
+}
+#sidenav ul li{
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+#sidenav ul li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+#sidenav ul li a:hover {
+    background-color: #fff;
+    color: #2218a7;
+}
+#sidenav ul li a i {
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+#sidenav .nav-item {
+    opacity: 0;
+}
+#sidenav.active .nav-item {
+    opacity: 1;
+}
+#sidenav ul li .tooltip {
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+}
+#sidenav ul li:hover .tooltip {
+    opacity: 1;
+}
+#sidenav.active ul li .tooltip {
+    display: none;
+}
+.main-content {
+    position: relative;
+    background-color: #f5f6fc;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+    padding: 1rem;
+}
+.log {
+    height: 70px;
+    width: 90px;
+    padding: 0;
+}
+.main-pic {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #2218a7;
+    border-radius: 15%;
+    overflow: hidden;
+    animation: slide-left 3s;
+    margin-top: 0%;
+}
+@keyframes slide-left {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+.grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 80vw;
+    margin-left: 150px;
+    margin-top: 50px;
+    min-height: 100vh
+}
+.grid p {
+    margin-left: 100px;
+    cursor: pointer;
+    transition: 0.8s;
+    color: #737ccf;
+}
+.grid p:hover {
+    color: #2218a7;
+}
+.slideshow {
+    height: 650px;
+    left: 80px;
+    width: calc(100% - 80px);
+    overflow: hidden;
+    margin-left: 90px;
+    background-image: url(./images/male-dr.png);
+    background-repeat: no-repeat;
+    transition: 3s;
+
+    animation-name: animate;
+    animation-duration: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 60s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes animate {
+    0%{
+        background-image: url(./images/doctor.png);
+    }
+    20%{
+        background-image: url(./images/pharmacists.png);
+    }
+    40%{
+        background-image: url(./images/programmers.png);
+    }
+    60%{
+        background-image: url(./images/pharm.png);
+    }
+    80%{
+        background-image: url(./images/community.png);
+    }
+    100%{
+        background-image: url(./images/male-dr.png);
+    }
+}
+.words {
+    text-align: center;
+    padding: 80px;
+    font-weight:600;
+    color: #737ccf;
+}
+button {
+    width: 200px;
+    height: 50px;
+    margin-top: 100px;
+    border: 1px solid #1c148d;
+    border-radius: 20px;
+    background-color: #bbc4eb;
+    color: #1c148d;
+    font-weight: 500;
+    cursor: pointer;
+}
+footer {
+    background-color: #737ccf;
+    color: #eee;
+    padding: 50px;
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 80px;
+    width: calc(100% - 80px);
+}
+footer i {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    padding: 5px;
+}
+/* for mobiles */
+@media (max-width: 480px) {
+    #sidenav {
+    }
+}
+/* for low resolution tablets & ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    #sidenav {
+    }
+}
+/* for tablets & ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #sidenav {
+    }
+}
+/* for laptops & desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    #sidenav {
+    }
+}
+/* for large screens */
+@media (min-width: 1281px) {
+    #sidenav {
+    }
+}
